@@ -1,1 +1,31 @@
+.quest-container {
+    display: inline-block;
+    /* min-width: 200px;
+    max-width: 200px; */
+    /* margin: 10px 10px auto 10px; */
+    background-color: #efefef;
+    position: fixed;
+    left: 78%;
+    height: 85%;
+    width: 18%;
+    padding-left: 25px;
+  }
 
+  .add-quest-button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    font-weight: lighter;
+    cursor: pointer;
+    position: fixed;
+    left: 90%;
+    top: 87%;
+  }
+
+  .add-quest-button:hover {
+    background-color: lightgrey; 
+    color: black;
+}
