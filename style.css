@@ -29,3 +29,24 @@
     background-color: lightgrey; 
     color: black;
 }
+
+progress{
+    height: 15px;
+    width: 10%;
+    border: solid black;
+    border-radius: 20px;
+    color: black;
+    
+}
+
+.user-info{
+
+}
+
+progress::-webkit-progress-bar{
+    background: white;    
+}
+
+progress::-webkit-progress-value{
+    background: orange;
+}
