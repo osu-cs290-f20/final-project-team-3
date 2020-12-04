@@ -1,21 +1,14 @@
-thead{
-    display: table-header-group;
-    vertical-align: middle;
-}
-td{
-    border-style: solid;
-    text-align: center;
-    border-width: 1px;
-    padding: 0px;
-    vertical-align: top;
-}
-.DaysNumber td{
-    text-align: left;
-    border: 0px;
-}
-table{
+.weeks{
+    position: relative;
+    top: 50px;
     width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
+    display: flex;
+    padding: 5px;
+}
+.Days{
+    padding: 5px;
+    border: solid 1px;
+    height: 250px;
+    width: 100%;
+    margin: 10px;
 }
