@@ -1,0 +1,68 @@
+
+.quest-container {
+    display: inline-block;
+    /* min-width: 200px;
+    max-width: 200px; */
+    /* margin: 10px 10px auto 10px; */
+    background-color: #966F57;
+    position: fixed;
+    left: 78%;
+    height: 85%;
+    width: 18%;
+    padding-left: 25px;
+  }
+
+  .quest-container h2{
+      color: white;
+  }
+
+  .add-quest-button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    font-weight: lighter;
+    cursor: pointer;
+    position: fixed;
+    left: 90%;
+    top: 87%;
+  }
+
+  .add-quest-button:hover {
+    background-color: lightgrey; 
+    color: black;
+}
+
+progress{
+    height: 15px;
+    width: 10%;
+    border: solid black;
+    border-radius: 20px;
+    color: black;
+    
+}
+
+/* .user-info{} */
+
+.header-container{
+    background-color: black;
+    padding-bottom: 15px;
+    margin-top: -20px;
+    margin-left: -7px;
+    margin-bottom: 10px;
+    color: white;
+    height: 100px;
+}
+.site-title{
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+progress::-webkit-progress-bar{
+    background: white;    
+}
+
+progress::-webkit-progress-value{
+    background: orange;
+}
