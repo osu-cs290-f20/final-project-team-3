@@ -1,9 +1,9 @@
 
 
-let name = "Johnny smith"
-let level = "0"
+let name = "John smith"
+let level = "4"
 let maxExp = 500;
-let currExp = 0;
+let currExp = 150;
 
 
 function insertNewPost(name, level, maxExp, currExp) {
@@ -18,10 +18,10 @@ function insertNewPost(name, level, maxExp, currExp) {
     let info = Handlebars.templates.userInfo(context);
   
     var header = document.getElementById('header-info');
-    header.insertAdjacentHTML('afterbegin', info);
+    header.insertAdjacentHTML('beforeend', info);
     return info;
   
   }
   insertNewPost(name, level, maxExp, currExp);
-  console.log("went into the function!");
+  console.log("went into the function");
   
