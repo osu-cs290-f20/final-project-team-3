@@ -16,7 +16,7 @@
       color: white;
   }
 
-  .add-quest-button{
+  #add-quest-button{
     background-color: black;
     color: white;
     font-size: 20px;
@@ -30,21 +30,25 @@
     top: 87%;
   }
 
-  .add-quest-button:hover {
+  #add-quest-button:hover {
     background-color: lightgrey; 
     color: black;
 }
 
 progress{
     height: 15px;
-    width: 10%;
+    width: 100%;
     border: solid black;
     border-radius: 20px;
     color: black;
     
 }
 
-/* .user-info{} */
+.user-info{
+    position: fixed;
+    top: 60px;
+    color: white;
+}
 
 .header-container{
     background-color: black;

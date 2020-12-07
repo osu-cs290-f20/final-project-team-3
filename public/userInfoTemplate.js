@@ -8,16 +8,14 @@ templates['userInfo'] = template({"compiler":[8,">= 4.3.0"],"main":function(cont
         return undefined
     };
 
-  return "\r\n      <h1 class=\"site-title\"> "
-    + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":2,"column":30},"end":{"line":2,"column":38}}}) : helper)))
-    + "<a href=\"#\"></a></h1>\r\n      <div class = \"user-info\">\r\n          Current Level : <span id= \"current level\"> "
-    + alias4(((helper = (helper = lookupProperty(helpers,"level") || (depth0 != null ? lookupProperty(depth0,"level") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"level","hash":{},"data":data,"loc":{"start":{"line":4,"column":53},"end":{"line":4,"column":62}}}) : helper)))
+  return "      <div class = \"user-info\">\r\n          Current Level : <span id= \"current-level\"> "
+    + alias4(((helper = (helper = lookupProperty(helpers,"level") || (depth0 != null ? lookupProperty(depth0,"level") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"level","hash":{},"data":data,"loc":{"start":{"line":2,"column":53},"end":{"line":2,"column":62}}}) : helper)))
     + " </span>\r\n        <progress max = "
-    + alias4(((helper = (helper = lookupProperty(helpers,"maxExp") || (depth0 != null ? lookupProperty(depth0,"maxExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"maxExp","hash":{},"data":data,"loc":{"start":{"line":5,"column":24},"end":{"line":5,"column":34}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"maxExp") || (depth0 != null ? lookupProperty(depth0,"maxExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"maxExp","hash":{},"data":data,"loc":{"start":{"line":3,"column":24},"end":{"line":3,"column":34}}}) : helper)))
     + " value = "
-    + alias4(((helper = (helper = lookupProperty(helpers,"currExp") || (depth0 != null ? lookupProperty(depth0,"currExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"currExp","hash":{},"data":data,"loc":{"start":{"line":5,"column":43},"end":{"line":5,"column":54}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"currExp") || (depth0 != null ? lookupProperty(depth0,"currExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"currExp","hash":{},"data":data,"loc":{"start":{"line":3,"column":43},"end":{"line":3,"column":54}}}) : helper)))
     + " data-label=\"Current xp is "
-    + alias4(((helper = (helper = lookupProperty(helpers,"currExp") || (depth0 != null ? lookupProperty(depth0,"currExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"currExp","hash":{},"data":data,"loc":{"start":{"line":5,"column":81},"end":{"line":5,"column":92}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"currExp") || (depth0 != null ? lookupProperty(depth0,"currExp") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"currExp","hash":{},"data":data,"loc":{"start":{"line":3,"column":81},"end":{"line":3,"column":92}}}) : helper)))
     + "\"> </progress>\r\n      </div>\r\n\r\n";
 },"useData":true});
 })();

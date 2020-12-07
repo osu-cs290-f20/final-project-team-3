@@ -1,15 +1,11 @@
-
-
-let name = "John smith"
-let level = "4"
+let level = 0;
 let maxExp = 500;
-let currExp = 150;
+let currExp = 0;
 
 
-function insertNewPost(name, level, maxExp, currExp) {
+function insertNewPost(level, maxExp, currExp) {
 
     let context = {
-      name: name,
       level: level,
       maxExp: maxExp,
       currExp: currExp,
@@ -22,6 +18,23 @@ function insertNewPost(name, level, maxExp, currExp) {
     return info;
   
   }
-  insertNewPost(name, level, maxExp, currExp);
-  console.log("went into the function");
+  insertNewPost(level, maxExp, currExp);
+  let questListener = document.getElementById('add-quest-button');
+
+function addExp(){
+  currExp = currExp+50;
+
+  if(currExp >= maxExp){
+    level = level +1;
+    currExp = currExp-maxExp;
+    maxExp = maxExp+150;
+  }
+
+  //insertNewPost(level, maxExp, currExp);
+}
+
+  questListener.addEventListener('click', addExp);
+
+
+  //console.log("went into the function");
   

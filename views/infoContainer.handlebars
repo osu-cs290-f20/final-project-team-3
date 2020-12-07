@@ -1,6 +1,7 @@
-    <header class = "header-container">
+
       <section id = "header-info"> 
-      {{userInfo}}
-    
+       {{#each userData}}
+            {{>userinfo }}
+        {{/each}}
+
       </section>
-    </header>
