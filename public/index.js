@@ -16,12 +16,12 @@ function addQuest_DB(title, desc, date){
 	var requestURL = '/';
 	request.open('POST', requestURL);
 
-	var quest = {
+	var reqBody = JSON.stringify({
 		title: title, 
 		desc: desc, 
 		date: date
-	};
-	var reqBody = JSON.stringify(quest);
+	});
+
 	request.setRequestHeader('Content-Type', 'application/json');
 	request.addEventListener('load', function(event){
 		if(event.target.status == 200){
@@ -30,6 +30,8 @@ function addQuest_DB(title, desc, date){
 		else
 			window.alert('Error adding quest:' + event.target.response);
 	})
+	console.log("Made it here");
+	console.log(reqBody);
 	request.send(reqBody);
 }
 
