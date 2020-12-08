@@ -1,11 +1,14 @@
 var hidden = document.getElementsByClassName('hidden');
 var exitAddQuest = document.getElementsByClassName('addQuest-hide-button');
 var addQuest = document.getElementById('addQuest-add');
+var addQuestButton = document.getElementById('add-quest-button');
+
+
 
 function rehideAddQuest(){
-	/*for(var i = 0; i < hidden.length; i++){
+	for(var i = 0; i < hidden.length; i++){
 		hidden[i].style.display = "none";
-	}*/
+	}
 	document.getElementById('addQuest-title-inp').value = "";
 	document.getElementById('addQuest-desc-inp').value = ""; 
 	document.getElementById('addQuest-date-inp').value = "";
@@ -55,3 +58,9 @@ addQuest.addEventListener('click', function(){
 		rehideAddQuest();
 	}
 });
+
+addQuestButton.addEventListener('click', function(){
+	for(var i = 0; i < hidden.length; i++){
+		hidden[i].style.display = "block";
+	}
+})

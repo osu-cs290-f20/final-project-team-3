@@ -1,27 +1,8 @@
-<div id="addQuest-backdrop" class="hidden"></div>
-<div id="addQuest-modal" class="hidden">
-	<div class="addQuest-contain">
-		<div class="addQuest-header">
-			<h3>Add A Quest</h3>
-			<button type="button" id="addQuest-close" class="addQuest-hide-button">&times;</button>
-		</div>
-		<div class="addQuest-main">
-			<div class="addQuest-input-element">
-				<label for="addQuest-title-inp">Quest Title</label>
-				<input type="text" id="addQuest-title-inp"></input>
-			</div>
-			<div class="addQuest-input-element">
-				<label for="addQuest-desc-inp">Quest Description</label>
-				<input type="text" id="addQuest-desc-inp"></input>
-			</div>
-			<div class="addQuest-input-element"><!--might not be needed depending what we do with dates-->
-				<label for="addQuest-date-inp">Date</label>
-				<input type="date" id="addQuest-date-inp"></input>
-			</div>
-		</div>
-		<div class="addQuest-footer">
-			<button type="button" id="addQuest-cancel" class="addQuest-hide-button">Cancel</button>
-			<button type="button" id="addQuest-add">Add Quest</button>
-		</div>
-	</div>
-</div>
+{{> header}}
+{{> addQuest}}
+<aside class="quest-container">
+
+    <h2> something here so we can test</h2>
+</aside>
+
+<button id = "add-quest-button"> Add a quest </button>
