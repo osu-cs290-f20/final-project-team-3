@@ -1,23 +1,24 @@
 var hidden = document.getElementsByClassName('hidden');
 var exitAddQuest = document.getElementsByClassName('addQuest-hide-button');
 var addQuest = document.getElementById('addQuest-add');
+var addQuestButton = document.getElementById('add-quest-button');
+
+
 
 function rehideAddQuest(){
-	/*for(var i = 0; i < hidden.length; i++){
+	for(var i = 0; i < hidden.length; i++){
 		hidden[i].style.display = "none";
-	}*/
-	document.getElementById('addQuest-title-inp').value = "";
+	}
 	document.getElementById('addQuest-desc-inp').value = ""; 
 	document.getElementById('addQuest-date-inp').value = "";
 }
 
-function addQuest_DB(title, desc, date){
+function addQuest_DB(desc, date){
 	var request = new XMLHttpRequest();
 	var requestURL = '/';
 	request.open('POST', requestURL);
 
 	var reqBody = JSON.stringify({
-		title: title, 
 		desc: desc, 
 		date: date
 	});
@@ -39,7 +40,6 @@ for(var i=0; i < exitAddQuest.length; i++)
 	exitAddQuest[i].addEventListener('click', rehideAddQuest);
 
 addQuest.addEventListener('click', function(){
-	var title = document.getElementById('addQuest-title-inp').value.trim();
 	var desc = document.getElementById('addQuest-desc-inp').value.trim(); 
 	var date = document.getElementById('addQuest-date-inp').value.trim();
 
@@ -47,11 +47,17 @@ addQuest.addEventListener('click', function(){
 	// console.log('Description:', desc);
 	// console.log('Date:', date);
 
-	if(title == '' || desc == '' || date == ''){
+	if(desc == '' || date == ''){
 		window.alert("You didn't enter all info");
 	}
 	else{
-		addQuest_DB(title, desc, date);
+		addQuest_DB(desc, date);
 		rehideAddQuest();
 	}
 });
+
+addQuestButton.addEventListener('click', function(){
+	for(var i = 0; i < hidden.length; i++){
+		hidden[i].style.display = "block";
+	}
+})
