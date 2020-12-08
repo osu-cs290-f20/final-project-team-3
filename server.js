@@ -21,9 +21,8 @@ app.get('/', function(req, res, next){
 })
 
 app.post('/', function(req, res, next){
-	if(req.body && req.body.title && req.body.desc && req.body.date){
+	if(req.body && req.body.desc && req.body.date){
 		questsData.push({
-			title: req.body.title,
 			desc: req.body.desc,
 			data: req.body.date
 		})
