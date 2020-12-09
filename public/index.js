@@ -1,50 +1,63 @@
-let level = 0;
-
-let progressBar = document.getElementById('progress-bar');
-let levelTracker = document.getElementById('current-level');
-
-let maxExp = progressBar.max;
-let currExp = progressBar.value;
+var hidden = document.getElementsByClassName('hidden');
+var exitAddQuest = document.getElementsByClassName('addQuest-hide-button');
+var addQuest = document.getElementById('addQuest-add');
+var addQuestButton = document.getElementById('add-quest-button');
 
 
-// function insertNewPost(level, maxExp, currExp) {
 
-//     let context = {
-//       level: level,
-//       maxExp: maxExp,
-//       currExp: currExp,
-//     }
-  
-//     let info = Handlebars.templates.userInfo(context);
-  
-//     var header = document.getElementById('header-info');
-//     header.insertAdjacentHTML('beforeend', info);
-//     return info;
-  
-//   }
-//   insertNewPost(level, maxExp, currExp);
-
-
-  let questListener = document.getElementById('add-quest-button');
-
-function addExp(){
-  currExp = currExp+50;
-
-  if(currExp >= maxExp){
-    level = level +1;
-    currExp = currExp-maxExp;
-    maxExp = maxExp+150;
-  }
-
- progressBar.max = maxExp;
- progressBar.value = currExp;
- levelTracker.innerHTML = level;
-
-
+function rehideAddQuest(){
+	for(var i = 0; i < hidden.length; i++){
+		hidden[i].style.display = "none";
+	}
+	document.getElementById('addQuest-desc-inp').value = ""; 
+	document.getElementById('addQuest-date-inp').value = "";
 }
 
-  questListener.addEventListener('click', addExp);
+function addQuest_DB(desc, date){
+	var request = new XMLHttpRequest();
+	var requestURL = '/';
+	request.open('POST', requestURL);
 
+	var reqBody = JSON.stringify({
+		desc: desc, 
+		date: date
+	});
 
-  //console.log("went into the function");
-  
+	request.setRequestHeader('Content-Type', 'application/json');
+	request.addEventListener('load', function(event){
+		if(event.target.status == 200){
+			//Code for adding onto client
+		}
+		else
+			window.alert('Error adding quest:' + event.target.response);
+	})
+	console.log("Made it here");
+	console.log(reqBody);
+	request.send(reqBody);
+}
+
+for(var i=0; i < exitAddQuest.length; i++)
+	exitAddQuest[i].addEventListener('click', rehideAddQuest);
+
+addQuest.addEventListener('click', function(){
+	var desc = document.getElementById('addQuest-desc-inp').value.trim(); 
+	var date = document.getElementById('addQuest-date-inp').value.trim();
+
+	// console.log('Title:', title);
+	// console.log('Description:', desc);
+	// console.log('Date:', date);
+
+	if(desc == '' || date == ''){
+		window.alert("You didn't enter all info");
+	}
+	else{
+		addQuest_DB(desc, date);
+		rehideAddQuest();
+	}
+});
+
+addQuestButton.addEventListener('click', function(){
+	for(var i = 0; i < hidden.length; i++){
+		hidden[i].style.display = "block";
+	}
+})
