@@ -4,7 +4,9 @@
   "description": "Team 3's final project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars views/partials/header.handlebars -f public/header.js",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
