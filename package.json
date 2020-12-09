@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "handlebars views/partials/calandar.handlebars -f public/calandartemplate.js",
+    "build": "handlebars views/partials/addQuest.handlebars -f public/addQuesttemplate.js",
     "prestart": "npm run build",
     "start": "node server.js"
   },
