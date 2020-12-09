@@ -1,287 +1,504 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js" charset="utf-8" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
-        <div id="Calendar">
-            <div class="weeks">
-                <div class="Days">
-                    <span>1</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>2</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>3</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>4</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>5</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>6</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
-                <div class="Days">
-                    <span>7</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
-                    </div>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">James</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <script src="index.js" charset="utf-8" defer></script>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Calendar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="game.html">Q&A</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="weeks">
-                <div class="Days">
-                    <span>8</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+          </nav>
+       <div class="container">
+           <div class="row mt-4">
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 1
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>9</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 2
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>10</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 3
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>11</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 4
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>12</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 5
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>13</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 6
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>14</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 7
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="weeks">
-                <div class="Days">
-                    <span>15</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 8
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>16</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 9
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>17</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 10
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>18</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 11
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>19</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 12
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>20</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 13
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>21</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 14
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="weeks">
-                <div class="Days">
-                    <span>21</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 15
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>22</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 16
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>23</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 17
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>24</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 18
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>25</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 19
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>26</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 20
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>27</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 21
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="weeks">
-                <div class="Days">
-                    <span>28</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 22
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>29</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 23
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Days">
-                    <span>30</span>
-                    <div class="Temp-Event">
-                        <span class="thereis">There is a Quest Here!</span>
-                        <span class="thereisnot">There isn't a Quest Here!</span>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 24
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
                     </div>
-                </div>
-                <div class="Dayss">
-                </div>
-                <div class="Dayss">
-                </div>
-                <div class="Dayss">
-                </div>
-                <div class="Dayss">
-                </div>
-            </div>
-        </div>
-        <div id="modal-backdrop" class="hidden"></div>
-        <div id="event-modal" class="hidden">
-          <div class="modal-dialog">
-    
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 25
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 26
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 27
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 28
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 29
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Day -->
+                <div class="col-md-3 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Day 30
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is a Quest Here!</h5>
+                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Expand
+                                </button>
+                        </div>
+                    </div>
+                </div> 
+           </div>
+       </div>
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
             <div class="modal-header">
-              <h3>Quests</h3>
-              <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+              <h5 class="modal-title" id="exampleModalLabel">Quests</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-    
             <div class="modal-body">
-                <div class="Event-Container">
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                <input type="checkbox" id="x" name="x" value="x-value">
-                <label for="x"> Nerf Riven</label><br>
-                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Grocery
+                    </label>
+                  </div>
             </div>
-    
             <div class="modal-footer">
-              <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-              <button type="button" id="modal-accept" class="action-button">Save</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
-    
           </div>
-        </div>    
+        </div>
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
-  </html>
+</html>
