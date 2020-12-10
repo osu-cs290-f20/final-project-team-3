@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "handlebars views/partials/addQuest.handlebars -f public/addQuesttemplate.js",
-    "prestart": "npm run build",
+    "buildH": "handlebars views/partials/header.handlebars -f public/header.js",
+    "prestart": "npm run build; npm run buildH",
     "start": "node server.js"
   },
   "repository": {

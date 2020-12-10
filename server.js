@@ -6,6 +6,7 @@ var exphbs = require('express-handlebars');
 //var path = require('path'); Maybe won't need
 
 var questsData = require('./questsData.json');
+var userData = require('./userData.json');
 
 var app = express();
 var port = process.env.PORT || 3459;
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', function(req, res, next){
-	res.status(200).render('mainPage');
+	res.status(200).render('mainPage', userData[0]);
 })
 
 app.post('/', function(req, res, next){
