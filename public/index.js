@@ -5,6 +5,31 @@ var addQuestButton = document.getElementById('add-quest-button');
 
 
 
+let progressBar = document.getElementById('progress-bar');
+let levelTracker = document.getElementById('current-level');
+let level = 0;
+
+let maxExp = progressBar.max;
+let currExp = progressBar.value;
+
+function addExp(value){ // function that gets adds xp to the current progress bar
+    console.log("inside the xp function");
+    currExp = currExp+value; // adds it first
+
+    if(currExp >= maxExp){ // checks if a level up accured 
+        currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
+        maxExp = maxExp+150; // makes it harder to level up
+        level = level+1; // level up
+    }
+    
+
+
+     progressBar.max = maxExp; // set the values.
+     progressBar.value = currExp;
+     levelTracker.innerHTML = level;
+}
+	
+
 function rehideAddQuest(){
 	for(var i = 0; i < hidden.length; i++){
 		hidden[i].style.display = "none";
@@ -32,6 +57,7 @@ function addQuest_DB(desc, date){
 			window.alert('Error adding quest:' + event.target.response);
 	})
 	console.log("Made it here");
+	addExp(50); // rewards xp when user adds a quest.
 	console.log(reqBody);
 	request.send(reqBody);
 }
