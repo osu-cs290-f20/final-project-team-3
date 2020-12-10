@@ -49,12 +49,29 @@ app.post('/', function(req, res, next){
 app.post('/games', function(req,res,next){
 	console.log("rec.body",req.body);
 	if(req.body && req.body.level && req.body.curr && req.body.max && req.body.name){
-		userData.push({
-			name: req.body.name,
-			level: req.body.level,
-			currExp: req.body.curr,
-			maxExp: req.body.max
-		});
+		var nameIndex = -1;
+        for(var i = 0; i < userData.length; i++){
+            if(userData[i].name == req.body.name)
+                nameIndex = i;
+        }
+        if(nameIndex == -1){
+            console.log("Couldnt find name")
+            userData.push({
+                name: req.body.name,
+                level: req.body.level,
+                currExp: req.body.curr,
+                maxExp: req.body.max
+            });
+        }
+        else{
+            console.log("Found name")
+            userData[nameIndex] = ({
+                name: req.body.name,
+                level: req.body.level,
+                currExp: req.body.curr,
+                maxExp: req.body.max
+            });
+        };
 		console.log("userinfo:", userData);
 		fs.writeFile(
 			__dirname + '/userData.json',

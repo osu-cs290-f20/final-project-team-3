@@ -1,21 +1,8 @@
 [
   {
     "name": "John Smith",
-    "level": "1",
-    "maxExp": "500",
-    "currExp": "0",
-    "_locals": {}
-  },
-  {
-    "name": "John Smith",
-    "level": 2,
-    "currExp": 10,
-    "maxExp": 500
-  },
-  {
-    "name": "John Smith",
-    "level": 1,
-    "currExp": 10,
-    "maxExp": 500
+    "level": 3,
+    "currExp": 50,
+    "maxExp": 800
   }
 ]
