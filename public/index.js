@@ -6,7 +6,6 @@ var addQuest = document.getElementById('addQuest-add');
 var addQuestButton = document.getElementById('add-quest-button');
 
 
-
 let progressBar = document.getElementById('progress-bar');
 let levelTracker = document.getElementById('current-level');
 let level = parseInt(levelTracker.textContent);
@@ -18,23 +17,33 @@ let maxExp = progressBar.max;
 let currExp = progressBar.value;
 
 function addExp(value){ // function that gets adds xp to the current progress bar
+
+	console.log("html: ", levelTracker.innerHTML.trim());
+
     console.log("inside the xp function");
     currExp = currExp+value; // adds it first
 
 	if(currExp >= maxExp){ // checks if a level up accured 
-		alert("Good job ! You have just leveled up.");
+		alert("Good job ! You have just leveled up. , your current level is : ", timesLeveled);
         currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
         maxExp = maxExp+150; // makes it harder to level up
-        level = level+1; // level up
-    }
+		level = level+1; // level up
+	}
+	
     
 
 
     //  progressBar.max = maxExp; // set the values.
     //  progressBar.value = currExp;
 	//  levelTracker.innerHTML = level;
+	console.log("Level is: ", level+1);
+	console.log("Name is : ", name + "<---");
+	console.log("maxExp : ", maxExp+1);
+	console.log("curr : ", currExp+1);
+
+	console.log("type --> ", typeof(level));
 	 
-	addToDb_main('Hess', 10, maxExp, currExp);
+	addToDb_main(name, level, maxExp, currExp);
 }
 
 
@@ -44,6 +53,7 @@ function addToDb_main(name, level, max, current){
 	var requestURL = '/games';
 	request.open('POST', requestURL);
 
+	console.log("level is a : ", typeof(level));
 	var reqBody = JSON.stringify({
 	   name: name,
 	   level: level,
@@ -56,11 +66,12 @@ function addToDb_main(name, level, max, current){
 		console.log(event.target.status);
 	   if(event.target.status == 200){
 		   progressBar.max = max; // set the values.
-		   progressBar.value = curent;
+		   progressBar.value = current;
 		   levelTracker.textContent = level;
+		  
 	   }
 	   else
-		   window.alert('Error adding quest:' + event.target.response);
+		   console.log("whoops");
    })
 
 	   request.send(reqBody);

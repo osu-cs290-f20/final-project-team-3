@@ -47,7 +47,7 @@ app.post('/', function(req, res, next){
 });
 
 app.post('/games', function(req,res,next){
-	console.log(req.body);
+	console.log("rec.body",req.body);
 	if(req.body && req.body.level && req.body.curr && req.body.max && req.body.name){
 		userData.push({
 			name: req.body.name,
@@ -76,7 +76,7 @@ app.post('/games', function(req,res,next){
 })
 
 app.get('/games', function (req, res, next) {
-	res.status(200).render('game');
+	res.status(200).render('game',userData[0]);
 })
 
 app.get('*', function (req, res) {
