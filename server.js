@@ -47,6 +47,7 @@ app.post('/', function(req, res, next){
 });
 
 app.post('/games', function(req,res,next){
+	console.log(req.body);
 	if(req.body && req.body.level && req.body.curr && req.body.max && req.body.name){
 		userData.push({
 			name: req.body.name,
@@ -72,8 +73,6 @@ app.post('/games', function(req,res,next){
 	else {
 		res.status(400).send("not all the data needed were recived");
 	}
-
-	next();
 })
 
 app.get('/games', function (req, res, next) {

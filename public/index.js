@@ -12,7 +12,7 @@ let levelTracker = document.getElementById('current-level');
 let level = parseInt(levelTracker.textContent);
 let nameClass = document.getElementsByClassName("navbar-brand");
 let name = nameClass[0].textContent;
-console.log(level);
+//console.log(level);
 
 let maxExp = progressBar.max;
 let currExp = progressBar.value;
@@ -34,8 +34,9 @@ function addExp(value){ // function that gets adds xp to the current progress ba
     //  progressBar.value = currExp;
 	//  levelTracker.innerHTML = level;
 	 
-	addToDb_main(name, level, maxExp, currExp);
+	addToDb_main('Hess', 10, maxExp, currExp);
 }
+
 
 function addToDb_main(name, level, max, current){
 
@@ -46,13 +47,11 @@ function addToDb_main(name, level, max, current){
 	var reqBody = JSON.stringify({
 	   name: name,
 	   level: level,
-	   currExp: current,
-	   maxExp: max,
-
+	   curr: current,
+	   max: max
 	});
 
 	request.setRequestHeader('Content-Type', 'application/json');
-	
 	request.addEventListener('load', function(event){
 		console.log(event.target.status);
 	   if(event.target.status == 200){
@@ -61,7 +60,7 @@ function addToDb_main(name, level, max, current){
 		   levelTracker.textContent = level;
 	   }
 	   else
-		   console.log("whoops");
+		   window.alert('Error adding quest:' + event.target.response);
    })
 
 	   request.send(reqBody);

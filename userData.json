@@ -1,9 +1,26 @@
- [
-    {
-      "name": "John Smith",
-      "level": 0,
-      "maxExp": 500,
-      "currExp": 0
-    }
-  ]
-  
+[
+  {
+    "name": "John Smith",
+    "level": 0,
+    "maxExp": 500,
+    "currExp": 0
+  },
+  {
+    "name": "Hess",
+    "level": 10,
+    "currExp": 9,
+    "maxExp": 151
+  },
+  {
+    "name": "Hess",
+    "level": 10,
+    "currExp": 9,
+    "maxExp": 151
+  },
+  {
+    "name": "Hess",
+    "level": 10,
+    "currExp": 9,
+    "maxExp": 151
+  }
+]
