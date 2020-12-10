@@ -1,0 +1,6 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['header'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "	<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n		<div class=\"container-fluid\">\n			<a class=\"navbar-brand\" href=\"#\">James</a>\n			<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n				<script src=\"index.js\" charset=\"utf-8\" defer></script>\n				<span class=\"navbar-toggler-icon\"></span>\n			</button>\n			<div class=\"user-info\">\n				Current Level : <span id=\"current-level\"> 0 </span>\n				<progress id=\"progress-bar\" max=\"500\" value=\"0\" data-label=\"Current xp is 0\"> </progress>\n			</div>\n			<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n				<ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n					<li class=\"nav-item\">\n						<a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Calendar</a>\n					</li>\n					<li class=\"nav-item\">\n						<a class=\"nav-link\" href=\"games\">Q&A</a>\n					</li>\n				</ul>\n			</div>\n		</div>\n	</nav>\n";
+},"useData":true});
+})();
