@@ -1,3 +1,5 @@
+//const { json } = require("body-parser");
+
 var hidden = document.getElementsByClassName('hidden');
 var exitAddQuest = document.getElementsByClassName('addQuest-hide-button');
 var addQuest = document.getElementById('addQuest-add');
@@ -7,7 +9,10 @@ var addQuestButton = document.getElementById('add-quest-button');
 
 let progressBar = document.getElementById('progress-bar');
 let levelTracker = document.getElementById('current-level');
-let level = 0;
+let level = parseInt(levelTracker.textContent);
+let nameClass = document.getElementsByClassName("navbar-brand");
+let name = nameClass[0].textContent;
+console.log(level);
 
 let maxExp = progressBar.max;
 let currExp = progressBar.value;
@@ -16,7 +21,8 @@ function addExp(value){ // function that gets adds xp to the current progress ba
     console.log("inside the xp function");
     currExp = currExp+value; // adds it first
 
-    if(currExp >= maxExp){ // checks if a level up accured 
+	if(currExp >= maxExp){ // checks if a level up accured 
+		alert("Good job ! You have just leveled up.");
         currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
         maxExp = maxExp+150; // makes it harder to level up
         level = level+1; // level up
@@ -24,9 +30,41 @@ function addExp(value){ // function that gets adds xp to the current progress ba
     
 
 
-     progressBar.max = maxExp; // set the values.
-     progressBar.value = currExp;
-     levelTracker.innerHTML = level;
+    //  progressBar.max = maxExp; // set the values.
+    //  progressBar.value = currExp;
+	//  levelTracker.innerHTML = level;
+	 
+	addToDb_main(name, level, maxExp, currExp);
+}
+
+function addToDb_main(name, level, max, current){
+
+	var request = new XMLHttpRequest();
+	var requestURL = '/games';
+	request.open('POST', requestURL);
+
+	var reqBody = JSON.stringify({
+	   name: name,
+	   level: level,
+	   currExp: current,
+	   maxExp: max,
+
+	});
+
+	request.setRequestHeader('Content-Type', 'application/json');
+	
+	request.addEventListener('load', function(event){
+		console.log(event.target.status);
+	   if(event.target.status == 200){
+		   progressBar.max = max; // set the values.
+		   progressBar.value = curent;
+		   levelTracker.textContent = level;
+	   }
+	   else
+		   console.log("whoops");
+   })
+
+	   request.send(reqBody);
 }
 	
 
