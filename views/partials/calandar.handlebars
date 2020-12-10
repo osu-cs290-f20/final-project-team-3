@@ -1,9 +1,10 @@
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-		  integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+	<script>
+		var dataJSON = [];
+		{{#each Quests}}
+			dataJSON.push(['{{desc}}','{{data}}'])
+		{{/each}}
+	</script>
 </head>
 <div class="container, col-lg-4 col-xl-7 col-xxl-4 mt-5 mx-auto">
     <h1> calendar</h1>
@@ -25,8 +26,8 @@
 					<th>Sat</th>
 				</tr>
 			</thead>
-
-			<tbody id="calendar-body"></tbody>
+			<tbody id="calendar-body">
+			</tbody>
 		</table>
 		
 	</div>
@@ -55,5 +56,3 @@
 		</div>
 	</div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<script src="calendar.js"></script>

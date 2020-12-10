@@ -55,9 +55,3 @@ addQuest.addEventListener('click', function(){
 		rehideAddQuest();
 	}
 });
-
-addQuestButton.addEventListener('click', function(){
-	for(var i = 0; i < hidden.length; i++){
-		hidden[i].style.display = "block";
-	}
-})
