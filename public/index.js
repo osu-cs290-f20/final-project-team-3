@@ -73,6 +73,7 @@ function addToDb_main(name, level, max, current, url){
 }
 	
 
+
 function rehideAddQuest(){
 	for(var i = 0; i < hidden.length; i++){
 		hidden[i].style.display = "none";
@@ -100,7 +101,7 @@ function addQuest_DB(desc, date){
 			window.alert('Error adding quest:' + event.target.response);
 	})
 	console.log("Made it here");
-	addExp(50,'/'); // rewards xp when user adds a quest.
+	addExp(50,'/games'); // rewards xp when user adds a quest.
 	console.log(reqBody);
 	request.send(reqBody);
 }

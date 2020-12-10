@@ -93,7 +93,6 @@ app.post('/games', function(req,res,next){
 })
 
 
-
 app.get('/games', function (req, res, next) {
 	res.status(200).render('game',userData[0]);
 })
