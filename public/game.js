@@ -57,35 +57,6 @@ function Clear() {
     answer_input.value = "";
 }
 
-let progressBar = document.getElementById('progress-bar');
-let levelTracker = document.getElementById('current-level');
-let level = 0;
-
-let maxExp = progressBar.max;
-let currExp = progressBar.value;
-
-function addExp(value){ // function that gets adds xp to the current progress bar
-    console.log("inside the xp function");
-    currExp = currExp+value; // adds it first
-
-    if(currExp >= maxExp){ // checks if a level up accured 
-        currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
-        maxExp = maxExp+150; // makes it harder to level up
-        level = level+1; // level up
-    }
-    
-
-
-     progressBar.max = maxExp; // set the values.
-     progressBar.value = currExp;
-     levelTracker.innerHTML = level;
-    }
-
-// click button
-
-let questButton = document.getElementById("addQuest-add");
-questButton.addEventListener('click', addExp(50));
-
 
 
 var button = document.getElementsByClassName("btn-primary")
