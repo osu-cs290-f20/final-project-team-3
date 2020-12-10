@@ -103,6 +103,7 @@ function ModalGenerator(date, questDesc) {
     buttonSave.classList.add('btn-primary');
     buttonSave.innerHTML = 'Save Changes';
     modal_footer.appendChild(buttonSave);
+    //buttonSave.addEventListener('click', check());
     // modal-body main
     var modal_bodyDiv = document.createElement('div');
     modal_bodyDiv.classList.add('modal-body');
@@ -262,16 +263,26 @@ function next() {
 }
 
 
-var saved = document.getElementsByClassName("form-check-input");
-for (var i = 0; i < saved.length; i++) {
-    console.log("first");
-    if (saved[i].innerHTML == "Save Changes") {
-        console.log("second");
-        if (saved[i].checked) {
-            console.log("third");
-            saved[i].addEventListener('click', addExp(150, '/games'));
-        }
-    }
-}
+// var saved = document.getElementsByClassName("btn-primary");
+// //console.log("saved", saved);
+//  for (var i = 0; i < saved.length; i++) {
 
-var checkbox = document.getElementsByClassName('form-check-input');
+//     saved[i].addEventListener('click', check());
+//     console.log("added event listener");
+// }
+ 
+
+// var checkbox = document.getElementsByClassName('form-check-input');
+// console.log(checkbox);
+// function check(){
+//     console.log("inside the check function");
+//     var checkbox = document.getElementsByClassName('form-check-input');
+//     for(var i =0; i<checkbox.length; i++){
+//         if(checkbox[i].checked == true){
+//             addExp(150,'/games');
+//         }
+//         else if(checkbox[i].checked == false){
+//             console.log("check box is not checked");
+//         }
+//     }
+// }

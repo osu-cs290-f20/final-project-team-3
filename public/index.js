@@ -9,11 +9,32 @@ let level = parseInt(levelTracker.textContent);
 let nameClass = document.getElementsByClassName("navbar-brand");
 let name = nameClass[0].textContent;
 //console.log(level);
+var complete = document.getElementById("completed-quest");
+console.log("complete : ", complete);
+
+complete.addEventListener('click', check);
+
+function check(){
+
+	var checkbox = document.getElementsByClassName('form-check-input');
+	var counter = 0;
+	
+	for(var i = 0; i< checkbox.length;i++){
+		if(checkbox[i].checked){
+			addExp(150,'/games');
+		}
+	}
+	var btn = document.getElementById('complete-button');
+	btn.classList.remove('show');
+	
+
+}
 
 let maxExp = progressBar.max;
 let currExp = progressBar.value
 
 function addExp(value, url) { // function that gets adds xp to the current progress bar
+	
 
 	console.log("html: ", levelTracker.innerHTML.trim());
 
@@ -126,3 +147,4 @@ addQuestButton.addEventListener('click', function(){
 		hidden[i].style.display = "block";
 	}
 })
+
