@@ -26,7 +26,7 @@ function check(){
 		}
 	}
 	var btn = document.getElementById('complete-button');
-	btn.classList.remove('show');
+	btn.style.display = "none";
 	
 
 }
@@ -66,14 +66,13 @@ function addToDb_main(name, level, max, current, url) {
 	console.log("URL IS : ", requestURL);
 	request.open('POST', requestURL);
 
-	console.log("level is a : ", typeof (level));
 	var reqBody = JSON.stringify({
 		name: name,
 		level: level,
 		curr: current,
 		max: max
 	});
-
+	
 	request.setRequestHeader('Content-Type', 'application/json');
 	request.addEventListener('load', function (event) {
 		console.log(event.target.status);

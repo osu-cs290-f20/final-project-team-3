@@ -25,6 +25,8 @@ function addExp(value, url) { // function that gets adds xp to the current progr
     if (currExp >= maxExp) { // checks if a level up accured 
         alert("Good job ! You have just leveled up.");
         currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
+        if(currExp == 0)
+            currExp = 1;
         maxExp = maxExp + 150; // makes it harder to level up
         level = level + 1; // level up
     }
