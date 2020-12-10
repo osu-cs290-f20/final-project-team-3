@@ -7,6 +7,7 @@ var exphbs = require('express-handlebars');
 
 var questsData = require('./questsData.json');
 var userData = require('./userData.json');
+let addUsers = { user: userData }
 
 var app = express();
 var port = process.env.PORT || 3459;
@@ -16,6 +17,13 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.static('public'));
+
+app.get('/test', function (req, res, next) {
+	res.status(200).render('welcome', {
+		addUsers: userData
+	});
+	console.log("user data ===: ", addUsers)
+})
 
 app.get('/', function(req, res, next){
 	res.status(200).render('mainPage', userData[0]);
