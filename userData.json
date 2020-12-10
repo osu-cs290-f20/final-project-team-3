@@ -4,5 +4,17 @@
 		"level": "1",
 		"maxExp": "500",
 		"currExp": "0"
+	},
+	{
+		"name": "Alex",
+		"level": "1",
+		"maxExp": "500",
+		"currExp": "0"
+	},
+	{
+		"name": "Tim",
+		"level": "1",
+		"maxExp": "500",
+		"currExp": "0"
 	}
 ]
