@@ -23,10 +23,11 @@ function check(){
 	for(var i = 0; i< checkbox.length;i++){
 		if(checkbox[i].checked){
 			addExp(150,'/games');
+			checkbox[i].checked = false;
 		}
 	}
-	var btn = document.getElementById('complete-button');
-	btn.style.display = "none";
+	// var btn = document.getElementById('complete-button');
+	// btn.style.display = "none";
 	
 
 }

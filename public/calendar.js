@@ -96,15 +96,9 @@ function ModalGenerator(date, questDesc) {
     buttonClose.classList.add('btn');
     buttonClose.classList.add('btn-secondary');
     buttonClose.setAttribute('data-bs-dismiss', 'modal');
-    buttonClose.textContent = 'Close';
+    buttonClose.textContent = 'Save Changes';
     modal_footer.appendChild(buttonClose);
     // button save changes
-    var buttonSave = document.createElement('button');
-    buttonSave.setAttribute('type', 'button');
-    buttonSave.classList.add('btn');
-    buttonSave.classList.add('btn-primary');
-    buttonSave.innerHTML = 'Save Changes';
-    modal_footer.appendChild(buttonSave);
     //buttonSave.addEventListener('click', check());
     // modal-body main
     var modal_bodyDiv = document.createElement('div');
