@@ -1,9 +1,9 @@
 [
   {
     "name": "Tyler",
-    "level": 1,
-    "currExp": 50,
-    "maxExp": 500
+    "level": 4,
+    "currExp": 420,
+    "maxExp": 950
   },
   {
     "name": "Alex",

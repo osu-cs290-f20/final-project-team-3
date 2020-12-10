@@ -18,24 +18,28 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', function (req, res, next) {
+app.get('/test', function (req, res, next) {
 	res.status(200).render('welcome', {
 		addUsers: userData
+
 	});
 	console.log("user data ===: ", addUsers)
 })
 
-app.get('/:user/calendar', function (req, res, next) {
-	var user = req.params.user.toLowerCase();
-	if (userData[user]) {
-		res.status(200).render('mainPage', userData[user]);
-	}
-	else {
-		next()
-    }
+app.get('/', function (req, res, next) {
+	var Data = { Data: userData[0] }
+	console.log("data ====: ", Data)
+	res.status(200).render('mainPage', {
+		name: userData[0].name,
+		currExp: userData[0].currExp,
+		maxExp: userData[0].maxExp,
+		level: userData[0].level,
+		Quests: questsData
+	});
+	
 })
 
-app.post('/:user/calendar', function(req, res, next){
+app.post('/', function(req, res, next){
 	if(req.body && req.body.desc && req.body.date){
 		questsData.push({
 			desc: req.body.desc,
