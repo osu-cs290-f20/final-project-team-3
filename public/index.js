@@ -101,7 +101,7 @@ function addQuest_DB(desc, date){
 			window.alert('Error adding quest:' + event.target.response);
 	})
 	console.log("Made it here");
-	addExp(50,'/games'); // rewards xp when user adds a quest.
+	addExp(50,'/games'); // rewards xp when user adds a quest. also its cheating kinda
 	console.log(reqBody);
 	request.send(reqBody);
 }
