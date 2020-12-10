@@ -62,6 +62,7 @@ function Click(event){
 if(answer.toLowerCase() == Correct.toLowerCase()){
     alert("Correct! You earned 10xp!");
     Clear();
+    addExp(10, '/games'); // cheating? its ok
     questionGen();
   }
   else{
