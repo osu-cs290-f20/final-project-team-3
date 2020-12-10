@@ -11,7 +11,8 @@ let name = nameClass[0].textContent;
 //console.log(level);
 var complete = document.getElementById("completed-quest");
 console.log("complete : ", complete);
-
+let maxExp = progressBar.max;
+let currExp = progressBar.value
 complete.addEventListener('click', check);
 
 function check(){
@@ -30,8 +31,7 @@ function check(){
 
 }
 
-let maxExp = progressBar.max;
-let currExp = progressBar.value
+
 
 function addExp(value, url) { // function that gets adds xp to the current progress bar
 	
@@ -44,6 +44,8 @@ function addExp(value, url) { // function that gets adds xp to the current progr
 	if (currExp >= maxExp) { // checks if a level up accured 
 		alert("Good job ! You have just leveled up.");
 		currExp = currExp - maxExp; // semi-reset the progress bar, keeping overflown xp
+		if(currExp == 0)
+			currExp = 1; //Error where thinks currExp is null, so 1 is the lowest avaible
 		maxExp = maxExp + 150; // makes it harder to level up
 		level = level + 1; // level up
 	}
@@ -54,13 +56,11 @@ function addExp(value, url) { // function that gets adds xp to the current progr
 	// //  progressBar.max = maxExp; // set the values.
 	// //  progressBar.value = currExp;
 	// //  levelTracker.innerHTML = level;
-
 	addToDb_main(name, level, maxExp, currExp, url);
 }
 
 
 function addToDb_main(name, level, max, current, url) {
-
 	var request = new XMLHttpRequest();
 	var requestURL = url;
 	console.log("URL IS : ", requestURL);

@@ -1,8 +1,8 @@
 [
   {
     "name": "Tyler",
-    "level": 1,
-    "currExp": 0,
+    "level": 0,
+    "currExp": 1,
     "maxExp": 500
   }
 ]
