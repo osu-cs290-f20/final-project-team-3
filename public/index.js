@@ -16,7 +16,7 @@ let name = nameClass[0].textContent;
 let maxExp = progressBar.max;
 let currExp = progressBar.value;
 
-function addExp(value){ // function that gets adds xp to the current progress bar
+function addExp(value,url){ // function that gets adds xp to the current progress bar
 
 	console.log("html: ", levelTracker.innerHTML.trim());
 
@@ -33,24 +33,19 @@ function addExp(value){ // function that gets adds xp to the current progress ba
     
 
 
-    //  progressBar.max = maxExp; // set the values.
-    //  progressBar.value = currExp;
-	//  levelTracker.innerHTML = level;
-	console.log("Level is: ", level+1);
-	console.log("Name is : ", name + "<---");
-	console.log("maxExp : ", maxExp+1);
-	console.log("curr : ", currExp+1);
-
-	console.log("type --> ", typeof(level));
+    // //  progressBar.max = maxExp; // set the values.
+    // //  progressBar.value = currExp;
+	// //  levelTracker.innerHTML = level;
 	 
-	addToDb_main(name, level, maxExp, currExp);
+	addToDb_main(name, level, maxExp, currExp,url);
 }
 
 
-function addToDb_main(name, level, max, current){
+function addToDb_main(name, level, max, current, url){
 
 	var request = new XMLHttpRequest();
-	var requestURL = '/games';
+	var requestURL = url;
+	console.log("URL IS : ", requestURL);
 	request.open('POST', requestURL);
 
 	console.log("level is a : ", typeof(level));
@@ -105,7 +100,7 @@ function addQuest_DB(desc, date){
 			window.alert('Error adding quest:' + event.target.response);
 	})
 	console.log("Made it here");
-	addExp(50); // rewards xp when user adds a quest.
+	addExp(50,'/'); // rewards xp when user adds a quest.
 	console.log(reqBody);
 	request.send(reqBody);
 }
