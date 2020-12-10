@@ -25,7 +25,8 @@ app.post('/', function(req, res, next){
 	if(req.body && req.body.desc && req.body.date){
 		questsData.push({
 			desc: req.body.desc,
-			data: req.body.date
+			data: req.body.date, 
+			fulfilled: 'no'
 		})
 		console.log("Data to add:", questsData);
 		fs.writeFile(
